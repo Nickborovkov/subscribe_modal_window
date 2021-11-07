@@ -1,24 +1,14 @@
-# subscribe_modal_window
+# Subscribe modal window app
 
-## Project setup
-```
-yarn install
-```
+![image](https://github.com/Nickborovkov/subscribe_modal_window/blob/master/src/assets/images/appScreenshot.png)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## [See deployment](https://nickborovkov.github.io/traffic_lights_emulator_app/)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Info
+- Input validation with vuelidate
+- Validation errors show
+- Data saves to localStorage
+- If email already exists it doesn't save
+- Field at the bottom shows if subscription was successful of unsuccessful
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### This is a tesk task for Frontend developer position [see the task](https://docs.google.com/document/d/1KZcWSsd0oa4aS0PDVXyvPFJSUlnxYt9fDgsO34b97TM/edit)
