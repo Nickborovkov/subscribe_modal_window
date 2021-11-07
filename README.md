@@ -2,7 +2,7 @@
 
 ![image](https://github.com/Nickborovkov/subscribe_modal_window/blob/master/src/assets/images/appScreenshot.png)
 
-## [See deployment](https://nickborovkov.github.io/traffic_lights_emulator_app/)
+## [See deployment](https://nickborovkov.github.io/subscribe_modal_window/)
 
 ## Info
 - Input validation with vuelidate
