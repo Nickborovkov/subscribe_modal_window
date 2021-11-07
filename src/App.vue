@@ -1,28 +1,64 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="wrapper">
+
+    <div class="content">
+
+      <!--SideMenu template-->
+      <SideDrawer v-if="sideMenuOpen"></SideDrawer>
+
+      <!--Navigation panel template-->
+      <Navigation :toggleSideMenu="toggleSideMenu"
+                  :sideMenuOpen="sideMenuOpen"
+                  :toggleModal="toggleModalWindow">
+
+      </Navigation>
+
+    </div>
+
+    <!--Modal window-->
+    <ModalWindow v-if="modalOpen"
+                 :toggleModal="toggleModalWindow">
+
+    </ModalWindow>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import ModalWindow from "./components/common/ModalWindow";
+import Navigation from "./components/navigation/Navigation";
+import SideDrawer from "./components/sideDrawer/SideDrawer";
 
 export default {
-  name: 'App',
+  data () {
+    return {
+      modalOpen: false,
+      sideMenuOpen: false,
+    }
+  },
   components: {
-    HelloWorld
+    Navigation: Navigation,
+    SideDrawer: SideDrawer,
+    ModalWindow: ModalWindow
+  },
+  methods: {
+    toggleSideMenu () {
+      this.sideMenuOpen = !this.sideMenuOpen
+    },
+    toggleModalWindow () {
+      this.modalOpen = !this.modalOpen
+    },
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  *
+    margin: 0
+    padding: 0
+
+  .content
+    display: flex
+
 </style>
